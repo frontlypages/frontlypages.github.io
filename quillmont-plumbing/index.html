@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex">
+<title>Quillmont Plumbing &amp; Heating — Frontly demo</title>
+<meta name="description" content="Demo landing page for Quillmont Plumbing &amp; Heating, Main Street. Built by Frontly.">
+<link rel="icon" href="../assets/favicon.png">
+<style>
+@font-face{font-family:'Bricolage';src:url('fonts/Bricolage.ttf');font-weight:200 800}
+@font-face{font-family:'Jakarta';src:url('fonts/Jakarta.ttf');font-weight:200 800}
+:root{--teal:#0E4A54;--teal-d:#0A363E;--teal-l:#E3EFEF;--orange:#F07F2D;--orange-d:#D9691A;--ink:#14262B;--muted:#5D6F73;--bg:#F7F5F1;--card:#FFFFFF;--line:#E4E2DC}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Jakarta',sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1280px;margin:0 auto;padding:0 56px}
+.notice{background:var(--teal-d);color:#D7E8E8;font-size:13.5px;text-align:center;padding:9px 16px;letter-spacing:.01em}
+.notice b{color:#FFB37A;font-weight:700}
+nav{background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{display:flex;align-items:center;gap:12px}
+.mark{width:42px;height:42px;border-radius:12px;background:var(--teal);display:grid;place-items:center}
+.mark svg{width:24px;height:24px}
+.brand .name{font-family:'Bricolage';font-weight:700;font-size:23px;letter-spacing:-.02em;line-height:1}
+.brand .name small{display:block;font-family:'Jakarta';font-size:10.5px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.links{display:flex;gap:32px;font-size:15.5px;font-weight:600;color:#2E4247}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--orange);color:#fff;font-weight:700;font-size:16px;padding:14px 22px;border-radius:12px;box-shadow:0 8px 20px rgba(240,127,45,.28)}
+.btn.teal{background:var(--teal);box-shadow:0 8px 20px rgba(14,74,84,.22)}
+.btn.ghost{background:transparent;color:var(--teal);box-shadow:none;border:1.5px solid var(--teal)}
+.btn svg{width:18px;height:18px}
+.hero .wrap{display:grid;grid-template-columns:1.02fr 1fr;gap:56px;align-items:center;padding-top:42px;padding-bottom:54px}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:13.5px;font-weight:700;letter-spacing:.06em;color:var(--teal);background:var(--teal-l);padding:7px 13px;border-radius:99px}
+.eyebrow .dot{width:8px;height:8px;border-radius:50%;background:#2FA36B;box-shadow:0 0 0 4px rgba(47,163,107,.2)}
+h1{font-family:'Bricolage';font-weight:700;font-size:76px;line-height:1.0;letter-spacing:-.035em;margin:20px 0 20px;color:var(--teal-d)}
+h1 em{font-style:normal;color:var(--orange)}
+.lead{font-size:19px;line-height:1.55;color:var(--muted);max-width:520px}
+.ctas{display:flex;gap:12px;margin-top:30px}
+.trust{display:flex;gap:26px;margin-top:32px;font-size:14px;color:var(--muted)}
+.trust div{display:flex;gap:10px;align-items:center}
+.trust i{width:36px;height:36px;border-radius:10px;background:#fff;border:1px solid var(--line);display:grid;place-items:center;font-style:normal;color:var(--teal);font-weight:800}
+.trust b{display:block;color:var(--ink);font-size:15px}
+.stars{color:#F2A623;letter-spacing:1px}
+.photo{position:relative;height:540px}
+.photo .main{position:absolute;inset:0 0 0 30px;border-radius:26px;background:url(img/hero-plumber.jpg) 60% center/cover;box-shadow:0 30px 60px rgba(14,38,43,.2)}
+.photo .chip{position:absolute;left:0;bottom:40px;background:#fff;border-radius:16px;padding:14px 18px;display:flex;align-items:center;gap:14px;box-shadow:0 18px 40px rgba(14,38,43,.2)}
+.photo .chip .ic{width:46px;height:46px;border-radius:12px;background:var(--orange);display:grid;place-items:center}
+.photo .chip b{display:block;font-size:15.5px}
+.photo .chip span{font-size:13.5px;color:var(--muted)}
+.photo .badge{position:absolute;right:20px;top:20px;background:rgba(10,54,62,.88);color:#fff;border-radius:14px;padding:10px 14px;font-size:13px;font-weight:600}
+section{padding:70px 0}
+section.services{background:#fff;border-top:1px solid var(--line)}
+.sec-head{display:flex;justify-content:space-between;align-items:end;margin-bottom:28px}
+h2{font-family:'Bricolage';font-weight:700;font-size:42px;letter-spacing:-.03em;color:var(--teal-d)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.svc{background:var(--bg);border:1px solid var(--line);border-radius:18px;padding:22px 22px 20px;display:flex;gap:16px}
+.svc .ic{flex:0 0 48px;height:48px;border-radius:13px;background:var(--teal);display:grid;place-items:center}
+.svc .ic svg{width:24px;height:24px}
+.svc h3{font-family:'Bricolage';font-size:20px;font-weight:700;letter-spacing:-.01em}
+.svc p{font-size:14.5px;color:var(--muted);margin-top:4px;line-height:1.45}
+.reviews .grid{grid-template-columns:repeat(3,1fr)}
+.rev{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.rev p{font-size:15.5px;line-height:1.55;margin:10px 0 14px}
+.rev .who{font-size:13.5px;color:var(--muted)}
+.work{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:22px}
+.work div{height:200px;border-radius:16px;background-size:cover;background-position:center}
+.visit .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hours{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px 30px}
+.hours div{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px dashed var(--line);font-size:16px}
+.hours div:last-child{border:0}
+.today{font-weight:700;color:var(--teal)}
+.visitcopy p{color:var(--muted);font-size:17px;line-height:1.6;margin:14px 0 22px}
+footer{background:var(--teal-d);color:#CFE2E2;padding:30px 0;font-size:14px}
+footer .wrap{display:flex;justify-content:space-between}
+.callbar{display:none}
+@media (max-width:640px){
+  .wrap{padding:0 20px}
+  .notice{font-size:12.5px;padding:8px 12px}
+  nav .wrap{height:64px}
+  .mark{width:36px;height:36px;border-radius:10px}.mark svg{width:20px;height:20px}
+  .brand .name{font-size:19px}.brand .name small{font-size:9px}
+  .links{display:none}
+  nav .btn{padding:10px 13px;font-size:14px;border-radius:10px}
+  .hero .wrap{display:flex;flex-direction:column-reverse;gap:22px;padding-top:16px;padding-bottom:34px}
+  .photo{height:240px;width:100%}
+  .photo .main{inset:0;border-radius:18px}
+  .photo .chip{left:12px;bottom:12px;padding:9px 13px 9px 9px;border-radius:13px;gap:10px}
+  .photo .chip .ic{width:36px;height:36px;border-radius:10px}
+  .photo .chip b{font-size:13.5px}.photo .chip span{font-size:12px}
+  .photo .badge{right:10px;top:10px;font-size:11.5px;padding:7px 10px;border-radius:10px}
+  .eyebrow{font-size:12px}
+  h1{font-size:44px;margin:14px 0 12px}
+  .lead{font-size:16px}
+  .ctas{margin-top:20px;gap:10px}.ctas .btn{flex:1;justify-content:center;padding:14px 8px;font-size:15px}
+  .trust{gap:14px;margin-top:20px;font-size:12px}.trust i{width:30px;height:30px}.trust b{font-size:13.5px}
+  .trust div:nth-child(3){display:none}
+  section{padding:42px 0}
+  h2{font-size:30px}.sec-head .btn{display:none}
+  .grid,.reviews .grid{grid-template-columns:1fr;gap:12px}
+  .work{grid-template-columns:1fr 1fr}.work div{height:130px}.work div:nth-child(3){display:none}
+  .visit .wrap{grid-template-columns:1fr}
+  footer{padding-bottom:100px}footer .wrap{flex-direction:column;gap:6px}
+  .callbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-top:1px solid var(--line);z-index:10}
+  .callbar .btn{flex:1;justify-content:center;padding:15px 8px;font-size:15.5px;white-space:nowrap}
+  .callbar .btn:first-child{flex:1.35}
+  .notice .dk{display:none}
+  h1{font-size:50px}
+}
+</style></head>
+<body>
+<div class="notice"><b>Same-day callouts</b> · Licensed &amp; insured<span class="dk"> · Free, no-obligation quotes</span></div>
+<nav><div class="wrap">
+  <a class="brand" href="#"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.5C9 7 6.5 10 6.5 13.5a5.5 5.5 0 0 0 11 0C17.5 10 15 7 12 2.5z"/></svg></span><span class="name">Quillmont<small>Plumbing &amp; Heating</small></span></a>
+  <div class="links"><a href="#services">Services</a><a href="#reviews">Reviews</a><a href="#hours">Hours</a><a href="#hours">Service area</a></div>
+  <a class="btn" href="tel:5550194471"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>Call now</a>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <div>
+    <span class="eyebrow"><span class="dot"></span>Plumbers available today · 7 am – 8 pm</span>
+    <h1>Leaks fixed <em>today.</em><br>Done right.</h1>
+    <p class="lead">Local, licensed plumbers for leaks, blocked drains, boilers and bathroom installs. Clear quotes before we start, and we tidy up after.</p>
+    <div class="ctas">
+      <a class="btn" href="#quote">Get a free quote →</a>
+      <a class="btn ghost" href="#book">Book a visit</a>
+    </div>
+    <div class="trust">
+      <div><i>★</i><span><b><span class="stars">★★★★★</span> 4.9</b>210+ reviews</span></div>
+      <div><i>✓</i><span><b>Licensed &amp; insured</b>Fully certified</span></div>
+      <div><i>⏱</i><span><b>Same-day</b>Most callouts</span></div>
+    </div>
+  </div>
+  <div class="photo"><div class="main"></div>
+    <div class="badge">12-month workmanship guarantee</div>
+    <div class="chip"><span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><b>Next free slot: today, 2:30 pm</b><span>Serving your area</span></div></div>
+  </div>
+</div></header>
+
+<section class="services" id="services"><div class="wrap">
+  <div class="sec-head"><h2>What we fix</h2><a class="btn ghost" href="#quote">Ask about a job</a></div>
+  <div class="grid">
+    <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M12 3c-3 4.5-5.5 7.5-5.5 11a5.5 5.5 0 0 0 11 0C17.5 10.5 15 7.5 12 3z"/></svg></span><div><h3>Leaks &amp; burst pipes</h3><p>Fast leak detection and repairs, day or evening.</p></div></div>
+    <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M4 4h16v4H4zM8 8v4a4 4 0 0 0 8 0V8M12 16v5"/></svg></span><div><h3>Blocked drains</h3><p>Sinks, showers and toilets cleared, no mess.</p></div></div>
+    <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><rect x="6" y="2.5" width="12" height="19" rx="3"/><path d="M12 15.5a2 2 0 1 0 0-4c-1 1.3-2 2.4 0 4z"/></svg></span><div><h3>Boilers &amp; water heaters</h3><p>Repairs, servicing and new installs.</p></div></div>
+    <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M3 12h18v3a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5zM6 12V5a2 2 0 0 1 4 0"/></svg></span><div><h3>Bathroom installs</h3><p>Showers, basins, taps and toilets fitted.</p></div></div>
+    <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><div><h3>Taps &amp; toilets</h3><p>Drips, running toilets and replacements.</p></div></div>
+    <div class="svc"><span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4"/></svg></span><div><h3>Emergency callouts</h3><p>Priority visits when water won't wait.</p></div></div>
+  </div>
+</div></section>
+
+<section class="reviews" id="reviews"><div class="wrap">
+  <div class="sec-head"><h2>Neighbors say</h2><span class="stars" style="font-size:20px">★★★★★ <span style="color:var(--muted);font-size:15px">4.9 average</span></span></div>
+  <div class="grid">
+    <div class="rev"><span class="stars">★★★★★</span><p>“Came the same afternoon, found the leak in ten minutes and left the kitchen spotless.”</p><div class="who">Dana R. · Leak repair</div></div>
+    <div class="rev"><span class="stars">★★★★★</span><p>“Clear quote up front, no surprises. Our new shower looks fantastic.”</p><div class="who">Marcus T. · Bathroom install</div></div>
+    <div class="rev"><span class="stars">★★★★★</span><p>“Boiler died on a Sunday. They called back within the hour. Lifesavers.”</p><div class="who">Priya K. · Emergency callout</div></div>
+  </div>
+  <div class="work"><div style="background-image:url(img/plumber-sink.jpg);background-position:center 30%"></div><div style="background-image:url(img/bathroom-brass.jpg)"></div><div style="background-image:url(img/bathroom-basin.jpg)"></div></div>
+</div></section>
+
+<section class="visit" id="hours" style="background:#fff;border-top:1px solid var(--line)"><div class="wrap">
+  <div class="visitcopy"><h2>Serving your area</h2><p>Based on Main Street and covering the surrounding neighborhoods. Tell us your address and we'll confirm a time.</p><a class="btn teal" href="#quote">Get a free quote →</a></div>
+  <div class="hours">
+    <div><span>Monday – Friday</span><span class="today">7:00 am – 8:00 pm</span></div>
+    <div><span>Saturday</span><span>8:00 am – 5:00 pm</span></div>
+    <div><span>Sunday</span><span>Emergency callouts only</span></div>
+  </div>
+</div></section>
+<footer><div class="wrap"><span>© Quillmont Plumbing &amp; Heating · Main Street</span><span>(555) 019-4471 · hello@quillmont.example</span></div></footer>
+
+<div class="callbar">
+  <a class="btn" href="tel:5550194471">📞 Call (555) 019-4471</a>
+  <a class="btn teal" href="#quote">Get a quote</a>
+</div>
+</body></html>
